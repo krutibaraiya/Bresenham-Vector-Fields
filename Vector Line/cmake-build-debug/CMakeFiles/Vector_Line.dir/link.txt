@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Vector_Line.dir/main.cpp.o  -o Vector_Line  -lglut -lGLU -lGL 
