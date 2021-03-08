@@ -10,11 +10,14 @@ using namespace std;
 class BresenhamLine {
 private:
     Point P,Q;
+    
+    GLfloat randomFloat() {
+        return (GLfloat)rand() / RAND_MAX;
+    }
 
-
-    void draw_pixel(Point point) {
-        glColor3f(1,1,1);
-        glPointSize(5);
+        void draw_pixel(Point point) {
+        glColor3f(randomFloat(),randomFloat(),randomFloat());
+        glPointSize(2);
         glBegin(GL_POINTS);
         glVertex2i(point.x, point.y);
         glEnd();
