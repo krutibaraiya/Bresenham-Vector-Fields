@@ -13,8 +13,8 @@ private:
     int radius;
 
     void draw_circle(Point point) {
-        glColor3f(0,0,1);
-        glPointSize(5);
+        glColor3f(1,0,0);
+        glPointSize(0);
         glBegin(GL_POINTS);
         glVertex2i(center.x + point.x, center.y + point.y);
         glEnd();
