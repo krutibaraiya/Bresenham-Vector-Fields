@@ -15,6 +15,7 @@ void myInit() {
 }
 
 void myDisplay() {
+    glClear(GL_COLOR_BUFFER_BIT);
     BresenhamLine bresenhamLine = BresenhamLine(Start, End);
     bresenhamLine.draw_line();
     glFlush();
@@ -37,7 +38,7 @@ int main(int argc, char **argv) {
     glutInitWindowSize(1000, 1000);
     glutInitWindowPosition(-500, -550);
     glutCreateWindow("Bresenham's Line Drawing");
-    myInit();
     glutDisplayFunc(myDisplay);
+    myInit();
     glutMainLoop();
 }
