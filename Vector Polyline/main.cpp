@@ -1,6 +1,3 @@
-
-
-
 #include <bits/stdc++.h>
 #include <GL/glut.h>
 #include "../Point.h"
@@ -35,8 +32,8 @@ int main(int argc, char **argv) {
     glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
     glutInitWindowSize(500, 500);
     glutInitWindowPosition(-250, -250);
-    glutCreateWindow("Bresenham's PolyLine Drawing");
-    myInit();
+    glutCreateWindow("Vector Polyline Visualization");
     glutDisplayFunc(myDisplay);
+    myInit();
     glutMainLoop();
 }
