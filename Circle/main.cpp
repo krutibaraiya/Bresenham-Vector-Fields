@@ -17,6 +17,7 @@ void myInit() {
 
 
 void myDisplay() {
+    glClear(GL_COLOR_BUFFER_BIT);
     BresenhamCircle midPointCircle = BresenhamCircle(center,radius);
     midPointCircle.MidPointCircle();
     glFlush();
@@ -38,7 +39,7 @@ int main(int argc, char **argv) {
     glutInitWindowSize(1000, 1000);
     glutInitWindowPosition(-500, 500);
     glutCreateWindow("Bresenham's Circle Drawing");
-    myInit();
     glutDisplayFunc(myDisplay);
+    myInit();
     glutMainLoop();
 }
