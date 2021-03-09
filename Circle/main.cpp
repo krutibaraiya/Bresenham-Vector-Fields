@@ -4,6 +4,19 @@
 #include "BresenhamCircle.h"
 
 using namespace std;
+using namespace std::chrono;
+
+struct Timer {
+    string name{""};
+    time_point<high_resolution_clock> end, start{high_resolution_clock::now()};
+    duration<float, std::milli> duration;
+    Timer() = default;
+    Timer(string name): name(name) {}
+    ~Timer() {
+        end = high_resolution_clock::now(); duration = end - start;
+        cout << "@" << name << "> " << duration.count() << " ms" << '\n';
+    }
+};
 
 Point center;
 int radius;
@@ -17,10 +30,12 @@ void myInit() {
 
 
 void myDisplay() {
+	Timer timer("Circle Drawing");
     glClear(GL_COLOR_BUFFER_BIT);
     BresenhamCircle midPointCircle = BresenhamCircle(center,radius);
     midPointCircle.MidPointCircle();
     glFlush();
+    this_thread::sleep_for(chrono::milliseconds(100));
 }
 
 int main(int argc, char **argv) {
@@ -36,7 +51,7 @@ int main(int argc, char **argv) {
 
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_SINGLE|GLUT_RGB);
-    glutInitWindowSize(1000, 1000);
+    glutInitWindowSize(500, 500);
     glutInitWindowPosition(-500, 500);
     glutCreateWindow("Bresenham's Circle Drawing");
     glutDisplayFunc(myDisplay);

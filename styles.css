@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    
+}
+body{
+    padding: 20px;
+}
+.outer{
+    padding: 20px;
+}
+img{
+    height: 700px;
+    width:1100px;
+}
+.lineimgage{
+    height: 500px;
+    width:900px;
+}
+
+.circleimgage{
+    height: 70%;
+    width:70%;
+}
+.names{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.name{
+    padding: 25px;
+    border-radius: 20px;
+    background-color: rgb(245, 244, 244);
+}
+

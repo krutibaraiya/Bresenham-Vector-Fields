@@ -5,6 +5,21 @@
 
 using namespace std;
 
+
+using namespace std::chrono;
+
+struct Timer {
+    string name{""};
+    time_point<high_resolution_clock> end, start{high_resolution_clock::now()};
+    duration<float, std::milli> duration;
+    Timer() = default;
+    Timer(string name): name(name) {}
+    ~Timer() {
+        end = high_resolution_clock::now(); duration = end - start;
+        cout << "@" << name << "> " << duration.count() << " ms" << '\n';
+    }
+};
+
 Point Start, End;
 
 void myInit() {
@@ -15,10 +30,12 @@ void myInit() {
 }
 
 void myDisplay() {
+	Timer timer("Line Drawing");
     glClear(GL_COLOR_BUFFER_BIT);
     BresenhamLine bresenhamLine = BresenhamLine(Start, End);
     bresenhamLine.draw_line();
     glFlush();
+    this_thread::sleep_for(chrono::milliseconds(100));
 }
 
 int main(int argc, char **argv) {
