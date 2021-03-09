@@ -30,9 +30,9 @@ void myInit() {
 void myDisplay() {
     Timer timer("Vector Field");
     glClear(GL_COLOR_BUFFER_BIT);
-    for(int i = -1000; i < 1000; i+=20) {
-        for(int j = -1000; j < 1000; j+=20) {
-            BresenhamLine bresenhamLine = BresenhamLine(Point(i,j),Point(i + j ,j  + i ));
+    for(int i = -500; i < 500; i+=40) {
+        for(int j = -500; j < 500; j+=40) {
+            BresenhamLine bresenhamLine = BresenhamLine(Point(i,j),Point(i + i ,j  +j ));
             bresenhamLine.draw_line();
         }
     }
