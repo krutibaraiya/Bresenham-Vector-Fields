@@ -1,0 +1,81 @@
+\hypertarget{class_bresenham_circle}{}\doxysection{Bresenham\+Circle Class Reference}
+\label{class_bresenham_circle}\index{BresenhamCircle@{BresenhamCircle}}
+
+
+{\ttfamily \#include $<$Bresenham\+Circle.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bresenham_circle_ad8bc96b05c5949f8edcc978c2dfa2966}{Bresenham\+Circle}} (\mbox{\hyperlink{struct_point}{Point}} Center, int Radius)
+\item 
+void \mbox{\hyperlink{class_bresenham_circle_a6422b87f6a4feef227405711cb734674}{Mid\+Point\+Circle}} ()
+\item 
+\mbox{\hyperlink{class_bresenham_circle_ad8bc96b05c5949f8edcc978c2dfa2966}{Bresenham\+Circle}} (\mbox{\hyperlink{struct_point}{Point}} Center, int Radius)
+\item 
+void \mbox{\hyperlink{class_bresenham_circle_a6422b87f6a4feef227405711cb734674}{Mid\+Point\+Circle}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class to implement Bresenham\textquotesingle{}s Circle drawing algorithm 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_bresenham_circle_ad8bc96b05c5949f8edcc978c2dfa2966}\label{class_bresenham_circle_ad8bc96b05c5949f8edcc978c2dfa2966}} 
+\index{BresenhamCircle@{BresenhamCircle}!BresenhamCircle@{BresenhamCircle}}
+\index{BresenhamCircle@{BresenhamCircle}!BresenhamCircle@{BresenhamCircle}}
+\doxysubsubsection{\texorpdfstring{BresenhamCircle()}{BresenhamCircle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Bresenham\+Circle\+::\+Bresenham\+Circle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{Center,  }\item[{int}]{Radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Parametrized constructor of \mbox{\hyperlink{class_bresenham_circle}{Bresenham\+Circle}} class 
+\begin{DoxyParams}{Parameters}
+{\em Center} & Center of the circle to be drawn \\
+\hline
+{\em Radius} & Radius of the circle to be drawn \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_bresenham_circle_ad8bc96b05c5949f8edcc978c2dfa2966}\label{class_bresenham_circle_ad8bc96b05c5949f8edcc978c2dfa2966}} 
+\index{BresenhamCircle@{BresenhamCircle}!BresenhamCircle@{BresenhamCircle}}
+\index{BresenhamCircle@{BresenhamCircle}!BresenhamCircle@{BresenhamCircle}}
+\doxysubsubsection{\texorpdfstring{BresenhamCircle()}{BresenhamCircle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Bresenham\+Circle\+::\+Bresenham\+Circle (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_point}{Point}}}]{Center,  }\item[{int}]{Radius }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Parametrized constructor of \mbox{\hyperlink{class_bresenham_circle}{Bresenham\+Circle}} class 
+\begin{DoxyParams}{Parameters}
+{\em Center} & Center of the circle to be drawn \\
+\hline
+{\em Radius} & Radius of the circle to be drawn \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_bresenham_circle_a6422b87f6a4feef227405711cb734674}\label{class_bresenham_circle_a6422b87f6a4feef227405711cb734674}} 
+\index{BresenhamCircle@{BresenhamCircle}!MidPointCircle@{MidPointCircle}}
+\index{MidPointCircle@{MidPointCircle}!BresenhamCircle@{BresenhamCircle}}
+\doxysubsubsection{\texorpdfstring{MidPointCircle()}{MidPointCircle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Bresenham\+Circle\+::\+Mid\+Point\+Circle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method to draw circle using Bresenham\textquotesingle{}s Circle drawing algorithm We shift the center of the circle to origin in the Bresenham\textquotesingle{}s circle drawing algorithm and then shift it back to its original location before plotting the pixel in draw\+\_\+pixel function
+
+Starting from the topmost point of the circle
+
+To avoid any floating point calculations, we multiply everything with 4
+
+8 way symmetry to draw the entire circle\mbox{\Hypertarget{class_bresenham_circle_a6422b87f6a4feef227405711cb734674}\label{class_bresenham_circle_a6422b87f6a4feef227405711cb734674}} 
+\index{BresenhamCircle@{BresenhamCircle}!MidPointCircle@{MidPointCircle}}
+\index{MidPointCircle@{MidPointCircle}!BresenhamCircle@{BresenhamCircle}}
+\doxysubsubsection{\texorpdfstring{MidPointCircle()}{MidPointCircle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Bresenham\+Circle\+::\+Mid\+Point\+Circle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Method to draw circle using Bresenham\textquotesingle{}s Circle drawing algorithm We shift the center of the circle to origin in the Bresenham\textquotesingle{}s circle drawing algorithm and then shift it back to its original location before plotting the pixel in draw\+\_\+pixel function
+
+Starting from the topmost point of the circle
+
+To avoid any floating point calculations, we multiply everything with 4
+
+8 way symmetry to draw the entire circle
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/jay/\+Desktop/\+Assignment 1/\+Circle/Bresenham\+Circle.\+h\end{DoxyCompactItemize}

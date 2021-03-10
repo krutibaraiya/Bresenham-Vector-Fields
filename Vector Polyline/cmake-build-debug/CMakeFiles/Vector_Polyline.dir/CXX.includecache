@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kruti/Desktop/CG_A1/Point.h
+bits/stdc++.h
+-
+
+/home/kruti/Desktop/CG_A1/Vector Polyline/BresenhamLine.h
+bits/stdc++.h
+-
+GL/glut.h
+-
+../Point.h
+/home/kruti/Desktop/CG_A1/Point.h
+
+/home/kruti/Desktop/CG_A1/Vector Polyline/polyline.cpp
+bits/stdc++.h
+-
+GL/glut.h
+-
+../Point.h
+/home/kruti/Desktop/CG_A1/Point.h
+BresenhamLine.h
+/home/kruti/Desktop/CG_A1/Vector Polyline/BresenhamLine.h
+

@@ -1,0 +1,3 @@
+/home/kruti/Desktop/CG_A1/Vector Polyline/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/kruti/Desktop/CG_A1/Vector Polyline/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/kruti/Desktop/CG_A1/Vector Polyline/cmake-build-debug/CMakeFiles/Vector_Polyline.dir

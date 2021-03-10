@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector Fields Using Bresenhams Line Drawing Algorithm</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Bresenhams</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="line.html">Line</a>
+      <a class="nav-item nav-link" href="circle.html">Circle</a>
+      <a class="nav-item nav-link" href="fieldline.html">VectorLine</a>
+      <a class="nav-item nav-link" href="fieldcircle.html">VectorCircle</a>
+      <a class="nav-item nav-link" href="fieldpolyline.html">Polyline</a>
+    </div>
+  </div>
+</nav>
+<div class="outer">    
+    <br>
+    <h3 style="text-align: center">Vector Field using Bresenham's lines </h3>
+    <br>
+
+    <div class="vectorlinecontainer1">
+      <img class = vlineimg src= "../images/ij.PNG" />
+      <div class="text-container">
+        <p> Test-1 </p>
+        <ul>
+            <li>Vector Field: F(X,Y)= (X,Y)</li>
+            <li>Limits: -500 to 500 on both axes </li>
+            <li>Sampling rate: 25 </li>
+            <li>Time taken: 1117ms </li>
+            
+        </ul>
+      </div>
+    </div>
+    <br>
+
+    <div class="vectorlinecontainer1">
+      <img class = vlineimg src= "../images/ijnew.PNG" />
+      <div class="text-container">
+        <p> Test-2 </p>
+        <ul>
+            <li>Vector Field: F(X,Y)= (X,Y)</li>
+            <li>Limits: -250 to 250 on both axes </li>
+            <li>Sampling rate: 50 </li>
+            <li>Time taken: 165.089ms </li>
+            <li>Remarks: Time reduced by 10-fold when sampling rate and limits were reduced.  </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+
+    <div class="vectorlinecontainer1">
+      <img class = vlineimg src= "../images/ijsmall.PNG" />
+      <div class="text-container">
+        <p> Test-3 </p>
+        <ul>
+            <li>Vector Field: F(X,Y)= (X,Y)</li>
+            <li>Limits: -100 to 100 on X and Y axes both </li>
+            <li>Sampling rate: 20</li>
+            <li>Time taken:103.549ms </li>
+            <li>Remarks: Change in limits has a greater impact on running time than sampling rate.</li>
+        </ul>
+      </div>
+    </div>
+    <br>
+
+    <div class="vectorlinecontainer1">
+      <img class = vlineimg src= "../images/j-i.PNG" />
+      <div class="text-container">
+        <p> Test-4 </p>
+        <ul>
+            <li>Vector Field: F(X,Y)= (Y,-X)</li>
+            <li>Limits: -500 to 500 on both axes </li>
+            <li>Sampling rate: 25 </li>
+            <li>Time taken:1224ms </li>
+            <li>Remark: Two similar linear vector fields with same constraints run in almost same time.</li>
+            
+        </ul>
+      </div>
+    </div>
+    <br>
+
+    <div class="vectorlinecontainer1">
+      <img class = vlineimg src= "../images/j-inew.PNG" />
+      <div class="text-container">
+        <p> Test-5 </p>
+        <ul>
+            <li>Vector Field: F(X,Y)= (Y,-X)</li>
+            <li>Limits: -250 to 250 on both axes </li>
+            <li>Sampling rate: 50 </li>
+            <li>Time taken: 190.061ms</li>
+            <li>Remarks:Time reduced by 10-fold when sampling rate and limits were reduced. </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+
+    <div class="vectorlinecontainer1">
+      <img class = vlineimg src= "../images/j-ismall.PNG" />
+      <div class="text-container">
+        <p> Test-6 </p>
+        <ul>
+            <li>Vector Field: F(X,Y)= (Y,-X)</li>
+            <li>Limits: -100 to 100 on X and Y axes both </li>
+            <li>Sampling rate: 20</li>
+            <li>Time taken: 103.398ms</li>
+            <li>Remarks:Change in limits has a greater impact on running time than sampling rate. </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+
+    <div class="vectorlinecontainer1">
+      <img class = vlineimg src= "../images/complex4.PNG" />
+      <div class="text-container">
+        <p> Test-7 </p>
+        <ul>
+            <li>Vector Field: F(X,Y)= (Y,-X)</li>
+            <li>Limits:-100 to 100 on X and Y axes both </li>
+            <li>Sampling rate: 20 </li>
+            <li>World Window size: 800x800</li>
+            <li>Viewport window size: 1000x1000</li>
+            <li> Viewport initial coordinates: (200,200)</li>
+            <li>Time taken: 103.46ms </li>
+            <li>Remarks: When size of field is almost same in world and viewport, then running time is almost same. </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+
+    <div class="vectorlinecontainer1">
+      <img class = vlineimg src= "../images/ji.PNG" />
+      <div class="text-container">
+        <p> Test-8 </p>
+        <ul>
+            <li>Vector Field: F(X,Y)= (Y,X)</li>
+            <li>Limits: -500 to 500 on both axes </li>
+            <li>Sampling rate: 50 </li>
+            <li>Time taken: 1140.05ms</li>
+            
+        </ul>
+      </div>
+    </div>
+    <br>
+
+    <div class="vectorlinecontainer1">
+      <img class = vlineimg src= "../images/jinew.PNG" />
+      <div class="text-container">
+        <p> Test-9 </p>
+        <ul>
+            <li>Vector Field: F(X,Y)= (Y,X)</li>
+            <li>Limits: </li>
+            <li>Sampling rate: </li>
+            <li>Time taken: 178.724ms</li>
+            <li>Remarks: Time reduced by 10-fold when sampling rate and limits were reduced.</li>
+        </ul>
+      </div>
+    </div>
+    <br>
+
+    <div class="vectorlinecontainer1">
+      <img class = vlineimg src= "../images/jismall.PNG" />
+      <div class="text-container">
+        <p> Test-10 </p>
+        <ul>
+            <li>Vector Field: F(X,Y)= (Y,X)</li>
+            <li>Limits:-100 to 100 on X and Y axes both</li>
+            <li>Sampling rate: 20</li>
+            <li>Time taken:103.382ms </li>
+            <li>Remarks: Change in limits has a greater impact on running time than sampling rate.</li>
+        </ul>
+      </div>
+    </div>
+    <br>
+
+    <div class="vectorlinecontainer1">
+      <img class = vlineimg src= "../images/complex3.PNG" />
+      <div class="text-container">
+        <p> Test-11</p>
+        <ul>
+            <li>Vector Field: F(X,Y)= (X3-9X , Y3-9Y)</li>
+            <li>Limits: -100 to 100 on X and Y axes both</li>
+            <li>Sampling rate: 20 </li>
+            <li>Time taken: 3783.4ms </li>
+            <li>Remarks: Running time of algorithm significantly increases for non-linear fields as compared to linear.</li>
+        </ul>
+      </div>
+    </div>
+    <br>
+
+   
+
+    <div class="vectorlinecontainer1">
+      <img class = vlineimg src= "../images/complex2.PNG" />
+      <div class="text-container">
+        <p> Test-12</p>
+        <ul>
+            <li>Vector Field: F(X,Y)= (X3-9X , Y3-9Y)</li>
+            <li>Limits: -100 to 100 on X and Y axes both</li>
+            <li>World Window size: 800x800</li>
+            <li>Viewport window size: 1000x1000</li>
+            <li> Viewport initial coordinates: (200,200)</li>
+            <li>Sampling rate: 20 </li>
+            <li>Time taken: 3739ms </li>
+            <li>Remarks: Since size of viewport > size of window, field gets clipped.</li>
+        </ul>
+      </div>
+    </div>
+    <br>
+
+    <div class="vectorlinecontainer1">
+      <img class = vlineimg src= "../images/complex1.PNG" />
+      <div class="text-container">
+        <p> Test-13 </p>
+        <ul>
+            <li>Vector Field: F(X,Y)= (X3-9X , Y3-9Y)</li>
+            <li>Limits:-100 to 100 on X and Y axes both </li>
+            <li>Sampling rate: 20 </li>
+            <li>World Window size: 1000x1000</li>
+            <li>Viewport window size: 500x500</li>
+            <li> Viewport initial coordinates: (200,200)</li>
+            <li>Time taken: 3900ms </li>
+            <li>Remarks: When field in world coordinates is smaller than that in viewport, it increases running time. This is due to stretching of vectors and hence more rendering.
+            </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+
+    
+
+    
+</div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

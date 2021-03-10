@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vector Fields Using Bresenhams Line Drawing Algorithm</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/styles.css" >
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Bresenhams</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="line.html">Line</a>
+      <a class="nav-item nav-link" href="circle.html">Circle</a>
+      <a class="nav-item nav-link" href="fieldline.html">VectorLine</a>
+      <a class="nav-item nav-link" href="fieldcircle.html">VectorCircle</a>
+      <a class="nav-item nav-link" href="fieldpolyline.html">Polyline</a>
+    </div>
+  </div>
+</nav>
+
+<div class="outer">    
+    <br>
+    <h3 style="text-align: center">Bresenhams Circle Drawing</h3>
+    <br>
+    <!--<ul>
+      <li>
+          <p>Test 1:</p>
+          <img  class="circleimage" src= "../images/circle1.PNG"/>
+      </li>
+      <li>
+          <p>Test 2:</p>
+          <img  class="circleimage" src= "../images/circle2.PNG"/>
+      </li>
+      <li>
+          <p>Test 3:</p>
+          <img  class="circleimage" src= "../images/circle3.PNG"/>
+      </li>
+    </ul>-->
+
+    <div class="circleimgcontainer">
+      <img class = circleimg src= "../images/circle1.PNG" />
+      <div class="text-container">
+        <p> Test-1 </p>
+        <ul>
+            <li>Centre: (53,29)</li>
+            <li>Radius: 100</li>
+            <li>Time taken: 101.062ms </li>
+        </ul>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="circleimgcontainer">
+      <img class = circleimg src= "../images/circle2.PNG" />
+      <div class="text-container">
+        <p> Test-2 </p>
+        <ul>
+            <li>Centre: (2,-100)</li>
+            <li>Radius: 234</li>
+            <li>Time taken: 100.959ms </li>
+        </ul>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="circleimgcontainer">
+      <img class = circleimg src= "../images/circle3.PNG" />
+      <div class="text-container">
+        <p> Test-3 </p>
+        <ul>
+            <li>Centre: (-150,150)</li>
+            <li>Radius: 40</li>
+            <li>Time taken: 100.058ms </li>
+        </ul>
+      </div>
+    </div>
+
+</div> 
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
