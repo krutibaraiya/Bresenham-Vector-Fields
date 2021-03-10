@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/Vector_Polyline.dir/main.cpp.o  -o Vector_Polyline  -lglut -lGLU -lGL 
