@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/Vector_Circle.dir/vector_circle.cpp.o  -o Vector_Circle  -lglut -lGLU -lGL 
